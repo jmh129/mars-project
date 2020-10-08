@@ -2,10 +2,9 @@ import React from "react";
 import { useQuery } from "react-query";
 import WeatherCard from "./WeatherCard";
 
-// const api_key = '6hSKiskVmPuDVjGCu0XQ4CaGUIRnZWAXAlz8hVdc'
 const fetchWeather = async () => {
   const res = await fetch(
-    "https://api.nasa.gov/insight_weather/?api_key=6hSKiskVmPuDVjGCu0XQ4CaGUIRnZWAXAlz8hVdc&feedtype=json&ver=1.0"
+    `https://api.nasa.gov/insight_weather/?api_key=${process.env.REACT_APP_API_KEY}&feedtype=json&ver=1.0`
   );
   return res.json();
 };
