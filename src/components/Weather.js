@@ -11,7 +11,6 @@ const fetchWeather = async () => {
 
 const Weather = () => {
   const { data, status } = useQuery("weather", fetchWeather);
-  console.log(data);
 
   return (
     <div>
@@ -34,7 +33,6 @@ const Weather = () => {
               />
             );
           })}
-          )
         </div>
       )}
     </div>
